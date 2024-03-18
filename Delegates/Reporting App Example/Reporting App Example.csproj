@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{273B09E8-2EC7-4999-8F8C-AA68E93CC8F5}</ProjectGuid>
+    <ProjectGuid>{B12DBD3E-F381-449C-87F5-124E2E492609}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Logger_Example</RootNamespace>
-    <AssemblyName>Logger Example</AssemblyName>
+    <RootNamespace>Reporting_App_Example</RootNamespace>
+    <AssemblyName>Reporting App Example</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsEmployee.cs" />
+    <Compile Include="clsReport.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="LogHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -17,26 +17,11 @@ public class Logger
 }
 public class Program
 {
-    static void LogToScreen(string message)
-    {
-        Console.WriteLine(message);
-    }
-
-    static void LogToDatabase(string message)
-    {
-        Console.WriteLine($"This error \"{message}\" will log to the database");
-    }
-
-    static void LogToFile(string message)
-    {
-        Console.WriteLine($"This error \"{message}\" will log to the file");
-    }
-
     static void Main(string[] args)
     {
         Logger loggerToScreen = new Logger(null);
-        Logger loggerToDatabase = new Logger(LogToDatabase);
-        Logger loggerToFile = new Logger(LogToFile);
+        Logger loggerToDatabase = new Logger(LogHandler.LogToDatabase);
+        Logger loggerToFile = new Logger(LogHandler.LogToFile);
 
         loggerToScreen.Log("Screen Error");
         loggerToDatabase.Log("Database Error");
